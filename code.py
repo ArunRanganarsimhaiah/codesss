@@ -88,4 +88,7 @@ def structure_data():
         'abstract': abstract_list
     })
     
+    # Convert publication_date to datetime type
+    df['publication_date'] = pd.to_datetime(df['publication_date'], format='%Y-%m-%d')
+    
     return df
